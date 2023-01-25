@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<title>SignUp-Todo</title>
+<div>
+    <h1>SignUp Page</h1>
+    <br>
+    <hr>
+    <br>
+    <div class="col-lg-5 shadow p-0 mx-auto">
+        <div class="alert alert-success">
+            <h1>Creat Account</h1>
+        </div>
+        <div class='p-4'>
+            <Form method="POST" action="/SignUp/">
+                {% csrf_token %}
+                {{ form.as_ul }}
+                <hr>
+                <input class="btn btn-success" type="submit" value="Creat Account">
+        </div>
+        </Form>
+    </div>
+    <br>
+    <hr>
+</div>
+{% endblock %}
